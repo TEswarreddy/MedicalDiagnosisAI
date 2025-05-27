@@ -112,7 +112,7 @@ function handleSubmit(e) {
     formData.xrayImages.forEach(file => data.append("xrayImages", file));
     console.log("Form data to be sent:", formData);
     // Send form data using axios
-    axios.post("https://your-backend-api/submit-form", data, {
+    axios.post("http://127.0.0.1:8000/predict/", data, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
